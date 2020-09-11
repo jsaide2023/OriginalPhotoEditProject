@@ -1,4 +1,4 @@
-//Saide Johnson
+//Saide J
 //CS1428H Fall 2019
 
 #include<iostream>
