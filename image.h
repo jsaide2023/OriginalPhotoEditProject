@@ -8,15 +8,13 @@
 class Image{
   private: 
     std::string file_name;
-    std::string magic_number = "P3";
+    std::string magic_number;
     int threshold_val;
     int cols;
     int rows;
-  //2-D vector better choice than dynamic 2d array
     std::vector<std::vector<Pixels> > image_vector;
 
-  public:
-  //FIXME: figure out what functions can be applied here as in crop row, columns etc. 
+  public: 
     Image();
     Image(std::string, int, int, int);
     ~Image();
@@ -25,6 +23,8 @@ class Image{
     void setThresholdVal(int);
     void setCols(int);
     void setRows(int);
+    int getCols();
+    int getRows();
 
 };
 
