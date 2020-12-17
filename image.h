@@ -8,8 +8,8 @@
 class Image{
   private: 
     std::string file_name;
-    std::string magic_number;
-    int threshold_val;
+    const std::string magic_number = "P3";
+    const int threshold_val = 255;
     int cols;
     int rows;
     std::vector<std::vector<Pixels> > image_vector;
@@ -19,13 +19,10 @@ class Image{
     Image(std::string, int, int, int);
     ~Image();
     void setFileName(std::string);
-    void setMagicNumber (std::string);
-    void setThresholdVal(int);
     void setCols(int);
     void setRows(int);
     int getCols();
     int getRows();
-
 };
 
 #endif
