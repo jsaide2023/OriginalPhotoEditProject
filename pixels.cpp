@@ -1,5 +1,6 @@
 #include "pixels.h"
 
+//defaults pixel to black
 Pixels::Pixels(){
   redColor = 0;
   greenColor = 0;
