@@ -19,7 +19,14 @@ Image::Image(std::string filename, int thresh_val, int num_cols, int num_rows) {
   }
 
 }
-Image::~Image() {} //figure out how to implent or if to implement a destructor
+Image::~Image() {
+  //use destructor to set object to its original state
+  //figure out how to implent or if to implement a destructor
+  for (int i = 0; i < image_vector.size(); i++) {
+    image_vector[i].clear();
+  }
+  image_vector.clear();
+}
 void Image::setFileName(std::string filename) {
   file_name = filename;
 }
