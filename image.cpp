@@ -23,9 +23,9 @@ Image::~Image() {
     image_vector[i].clear();
   }
   image_vector.clear();
-  setCols(0);
-  setRows(0);
-  setFileName("");
+  cols = 0;
+  rows = 0;
+  file_name = "";
 }
 void Image::setFileName(std::string filename) {
   file_name = filename;
@@ -35,4 +35,10 @@ void Image::setCols(int num_cols) {
 }
 void Image::setRows(int num_rows) {
   rows = num_rows;
+}
+int Image::getCols() {
+  return cols;
+}
+int Image::getRows() {
+  return rows;
 }
